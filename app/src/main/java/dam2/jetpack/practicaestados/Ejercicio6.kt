@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -30,6 +31,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 fun ContenidoTarjeta(){
     var contador by rememberSaveable { mutableStateOf(0) }
     var ctx = LocalContext.current
+    var eliminarTexto by rememberSaveable { mutableStateOf(false) }
    Column(Modifier.fillMaxSize(),
        horizontalAlignment = Alignment.CenterHorizontally,
        verticalArrangement = Arrangement.Center){
@@ -37,7 +39,7 @@ fun ContenidoTarjeta(){
 
 
            ConstraintLayout(Modifier.fillMaxWidth()) {
-               val (descripcion, interesa, compartir, guardar, contadorRef) = createRefs()
+               val (descripcion, interesa, compartir, guardar, contadorRef, masInfoRef, botonInfoRef) = createRefs()
 
                Box(modifier = Modifier.fillMaxWidth().padding(50.dp).constrainAs(descripcion){
                    top.linkTo(parent.top)
@@ -45,7 +47,35 @@ fun ContenidoTarjeta(){
                    Text("Únete a nosotros en este evento único lleno de aprendizaje, creatividad y conexión. Disfruta de charlas inspiradoras, talleres prácticos y actividades interactivas que te ayudarán a crecer personal y profesionalmente. ¡Vive una experiencia inolvidable junto a personas con tus mismos intereses!")
                }
 
-               val descBottom = createBottomBarrier(descripcion)
+               if (!eliminarTexto){
+                   Text("Más información sobre el evento", Modifier.constrainAs(masInfoRef){
+                       top.linkTo(descripcion.bottom)
+                       start.linkTo(parent.start)
+                       end.linkTo(parent.end)
+                   })
+               }else{
+                   Text("", Modifier.constrainAs(masInfoRef){
+                       top.linkTo(descripcion.bottom)
+                       start.linkTo(parent.start)
+                       end.linkTo(parent.end)
+                   })
+
+               }
+
+               Button(onClick = {
+                   eliminarTexto = !eliminarTexto
+               }, Modifier.constrainAs(botonInfoRef){
+                   top.linkTo(masInfoRef.bottom)
+                   start.linkTo(parent.start)
+                   end.linkTo(parent.end)
+               }){
+                   if (eliminarTexto) Text("mostrar texto") else Text("Ocultar texto")
+               }
+
+
+               val descBottom = createBottomBarrier(botonInfoRef)
+
+
 
                Button(onClick = {
                    contador++
