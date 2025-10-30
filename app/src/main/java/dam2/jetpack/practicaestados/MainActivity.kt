@@ -115,7 +115,11 @@ fun App(){
             composable (Pantallas.Ejercicio3.rutaComposable) {CuadradoColor()}
             composable (Pantallas.Ejercicio4.rutaComposable) {SumaResta()}
             composable (Pantallas.Ejercicio5.rutaComposable) { Invisibilidad() }
-            composable (Pantallas.Ejercicio6.rutaComposable) {ContenidoTarjeta()}
+            composable (Pantallas.Ejercicio6.rutaComposable) {ContenidoTarjeta("Ven al Tech & Fun Fest 2025!" +
+                    "Un evento donde la tecnología, la música y la creatividad se unen en un mismo lugar.\n" +
+                    "Disfruta de charlas inspiradoras, talleres interactivos y zona gamer.\n" +
+                    "Conoce a creadores, programadores y artistas innovadores.\n" +
+                    "¡No te lo pierdas, vive la experiencia que marcará el año!")}
         }
 
 

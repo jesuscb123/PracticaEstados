@@ -26,9 +26,9 @@ import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 
 
-@Preview
+
 @Composable
-fun ContenidoTarjeta(){
+fun ContenidoTarjeta(descripcionUsuario: String){
     var contador by rememberSaveable { mutableStateOf(0) }
     var ctx = LocalContext.current
     var eliminarTexto by rememberSaveable { mutableStateOf(false) }
@@ -44,7 +44,7 @@ fun ContenidoTarjeta(){
                Box(modifier = Modifier.fillMaxWidth().padding(50.dp).constrainAs(descripcion){
                    top.linkTo(parent.top)
                }, contentAlignment = Alignment.Center){
-                   Text("Únete a nosotros en este evento único lleno de aprendizaje, creatividad y conexión. Disfruta de charlas inspiradoras, talleres prácticos y actividades interactivas que te ayudarán a crecer personal y profesionalmente. ¡Vive una experiencia inolvidable junto a personas con tus mismos intereses!")
+                   Text(descripcionUsuario)
                }
 
                if (!eliminarTexto){
