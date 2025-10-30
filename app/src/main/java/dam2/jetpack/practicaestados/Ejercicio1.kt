@@ -49,7 +49,7 @@ fun CrearProducto(titulo: String, precio: String){
                 },
                     modifier = Modifier.constrainAs(boton){
                         top.linkTo(tituloRef.top)
-                        start.linkTo(contentEndBarrier)
+                        start.linkTo(contentEndBarrier, margin = 2.dp)
                         end.linkTo(parent.end)
                     }){
                     Text("Comprar")
