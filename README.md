@@ -85,9 +85,11 @@ El botón de restar disminuye el número del contador con cada click, pero cuán
 
 https://github.com/jesuscb123/PracticaEstados/blob/d9a9342ec56642c486037c4c2eeddd920a182d02/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio4.kt#L39-L43
 
-![ejercicio4_1](https://github.com/user-attachments/assets/e765b141-fb39-4dcf-a5ec-e4f5102e38ee)
+![ejercicio4_1](https://github.com/user-attachments/assets/c48efd0d-50a1-45cb-a6a5-30236cf279f6)
 
-![ejercicio4_2](https://github.com/user-attachments/assets/3e46b8c0-ef86-4271-aaac-b9572402b807)
+
+![ejercicio4_2](https://github.com/user-attachments/assets/b7844e62-4012-42db-9b5a-18aa9ae6e15d)
+
 
 
 
@@ -109,10 +111,10 @@ Al pulsar el botón, hará que sea true o false dependiendo del estado actual de
 
 https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio5.kt#L28-L33
 
-![Ejercicio5_1](https://github.com/user-attachments/assets/818960b6-439f-4e94-b60a-c0c2808cd2f8)
+![Ejercicio5_1](https://github.com/user-attachments/assets/fe131762-4c54-4e09-9dd9-c24fa0b1e399)
 
+![Ejercicio5_2](https://github.com/user-attachments/assets/344caa93-8440-4d7d-a1f6-587fa409cfe9)
 
-![Ejercicio5_2](https://github.com/user-attachments/assets/8b765995-3cef-4e6c-9ed9-7b68d09edef7)
 
 
 
@@ -170,6 +172,7 @@ Segundo preview:
 
 https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/PreviewEj6.kt#L25-L40
 
-![Ejercicio6](https://github.com/user-attachments/assets/e5f29711-64ad-421b-b59c-a7971d5ec15d)
+![Ejercicio6](https://github.com/user-attachments/assets/0647f975-6d56-42af-ba03-b171d200fa5b)
+
 
 
