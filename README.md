@@ -174,5 +174,8 @@ https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873f
 
 ![Ejercicio6](https://github.com/user-attachments/assets/0647f975-6d56-42af-ba03-b171d200fa5b)
 
+![Ejercicio5_2 (1)](https://github.com/user-attachments/assets/b5f9ee73-0276-49ea-befe-c2c49a0f93a8)
+
+
 
 
