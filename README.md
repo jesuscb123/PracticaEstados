@@ -60,7 +60,24 @@ https://github.com/jesuscb123/PracticaEstados/blob/d4f875fbe7fd376655a8b94334ffd
 
       Elegiría spread ya que se reparten los botones de manera uniforme, no hay tanto espacio como en el inside, pero hay un poco más de margen respecto a packed.
 
-# Ejercicio3
+## Ejercicio3
+Crea una pantalla con un botón y un cuadro de color (Box). 
+Cada vez que pulses el botón, el color del cuadro debe cambiar aleatoriamente 
+entre varios colores (por ejemplo, rojo, verde, azul o amarillo).
 
+El ejercicio está realizado con un Column para separar en columnas el cuadrado: el texto para que aparezca el nomnbre del color y el botón que cambiará el color. Estos elementos están en el centro.
+
+https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f43ed78bd49d/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio3.kt#L28-L59
+
+He creado un diccionario de colores en el que la clave es el nombre del color (String) y la clave es el color. Para que pueda ir modificando el color de forma aleatoria cada vez que pulsamos el botón, 
+he creado una variable que almacena la clave del diccionario, en este caso es un String: el nombre del color. Luego tengo otra variable que almacena el color, llamando a una función que he creado que dependiendo de la clave que tenga asignada la variable nombreColor, devolverá un color u otro.
+
+Entonces cada vez que se pulsa el botón, se cambia la clave y el color asignado cambiará.
+
+La variable nombreColor está almacenada con by rememberSaveable para que al rotar no cambie.
+
+https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f43ed78bd49d/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio3.kt#L42-L43
+
+https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f43ed78bd49d/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio3.kt#L54-L59
 
 
