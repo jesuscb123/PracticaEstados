@@ -62,7 +62,8 @@ https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f
 
 https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f43ed78bd49d/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio3.kt#L54-L59
 
-![ejercicio3](https://github.com/user-attachments/assets/2f252c10-ff24-4632-9ba5-fe3bca638930)
+
+![ejercicio3](https://github.com/user-attachments/assets/9fb2e7e4-889d-4bab-98a2-480ca7ff3351)
 
 
 ## Ejercicio4
@@ -83,9 +84,9 @@ El botón de restar disminuye el número del contador con cada click, pero cuán
 
 https://github.com/jesuscb123/PracticaEstados/blob/d9a9342ec56642c486037c4c2eeddd920a182d02/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio4.kt#L39-L43
 
-![ejercicio4_1](https://github.com/user-attachments/assets/04f330c8-301a-4f91-a2bf-eb7ea3ba9c89)
+![ejercicio4_1](https://github.com/user-attachments/assets/e765b141-fb39-4dcf-a5ec-e4f5102e38ee)
 
-![ejercicio4_2](https://github.com/user-attachments/assets/0f6b045f-41ea-41bb-9209-b2f9daa1c5dc)
+![ejercicio4_2](https://github.com/user-attachments/assets/3e46b8c0-ef86-4271-aaac-b9572402b807)
 
 
 
@@ -107,9 +108,11 @@ Al pulsar el botón, hará que sea true o false dependiendo del estado actual de
 
 https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio5.kt#L28-L33
 
-![Ejercicio5_1](https://github.com/user-attachments/assets/7ed7c4c9-7a84-46c7-beba-074a3ba3ca92)
+![Ejercicio5_1](https://github.com/user-attachments/assets/818960b6-439f-4e94-b60a-c0c2808cd2f8)
 
-![Ejercicio5_2](https://github.com/user-attachments/assets/7fb702c1-5a59-4577-8a19-9efb186779b1)
+
+![Ejercicio5_2](https://github.com/user-attachments/assets/8b765995-3cef-4e6c-9ed9-7b68d09edef7)
+
 
 
 
@@ -166,5 +169,6 @@ Segundo preview:
 
 https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/PreviewEj6.kt#L25-L40
 
-![Ejercicio6](https://github.com/user-attachments/assets/01c9b32d-7f0e-40d3-b054-90bad773f311)
+![Ejercicio6](https://github.com/user-attachments/assets/e5f29711-64ad-421b-b59c-a7971d5ec15d)
+
 
