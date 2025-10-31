@@ -63,7 +63,8 @@ https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f
 https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f43ed78bd49d/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio3.kt#L54-L59
 
 
-![ejercicio3](https://github.com/user-attachments/assets/9fb2e7e4-889d-4bab-98a2-480ca7ff3351)
+![ejercicio3](https://github.com/user-attachments/assets/34f301f9-6bfd-4f2c-9685-c16fd4014a81)
+
 
 
 ## Ejercicio4
