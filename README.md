@@ -33,28 +33,10 @@ https://github.com/jesuscb123/PracticaEstados/blob/d4f875fbe7fd376655a8b94334ffd
     ## Ejercicio2
     Crea una barra con tres acciones (solo texto, sin iconos): por ejemplo “Explorar”, “Favoritos”, “Perfil”.
 
-      - Colócalas en una cadena horizontal y prueba tres estilos: Spread, SpreadInside y Packed.
-   
-        Para colocarlos en una cadena horizontal y probar estos diferentes estilos, debemos hacer uso de constraint layout.
-
-        Barra spread:
-        Utilizamos createHorizontalChain, le debemos pasar la referencia de los botones y el tipo de chain Style, en este caso, spread.
+    He creado una variable que contiene un ChainStyle para que luego pueda ser modificado por los botones.
+    En un row introduzco los diferentes botones que cuándo se pulsen, cambiará la forma en la que se muestran los textos.
         
-        https://github.com/jesuscb123/PracticaEstados/blob/8cfc113c7dff3e738ce17940c7e961e31a0a97ba/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio2.kt#L51-L77
-
-        Barra Inside:
-
-        https://github.com/jesuscb123/PracticaEstados/blob/8cfc113c7dff3e738ce17940c7e961e31a0a97ba/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio2.kt#L79-L105
-
-        Barra Packed:
-
-        https://github.com/jesuscb123/PracticaEstados/blob/8cfc113c7dff3e738ce17940c7e961e31a0a97ba/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio2.kt#L107-L133
-
-        Todas los tipos de barras:
-
-        <img width="351" height="361" alt="image" src="https://github.com/user-attachments/assets/47df7955-779e-4235-b639-dbf43055b82f" />
-
-        
+    https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio2.kt#L31-L63
 
     - Justifica cuál elegirías para una barra de navegación inferior y por qué mejora la usabilidad.
 
@@ -128,4 +110,48 @@ Primero voy a mostrar todo el código de este ejercicio y luego desglosaremos ca
 
 https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L1-L121
 
+ - Cabecera visual
+     - Todos los ejercicios están realizados sobre composables y un solo Activity. Para la cabecera utilizo una función cabecera que recibe un título, un subtitulo y un modifier para poder utilizarlo dentro del constraint layout.
+   
+       https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Cabecera.kt#L16-L21
 
+    Luego se introduce dentro del constraint layout y le indicamos dónde irá situado dentro de la tarjeta. El título y el subtítulo nunca se solapan debido a que están introducidos en un Column.
+
+     https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L42-L49
+   
+- Cuerpo
+  La descripciónestá introducida en un Box y alineado al centro. Gracias a Constraint Layout puedo colocar la descripción justo debajo de la cabecera.
+
+  https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L51-L55
+
+  También dispone de otro texto más abajo para poder ampliar la descripción del evento pero puede ser ocultado si el usuario lo desea a través de un botón. El texto depende de una variable booleana, si es true se oculta y si es false aparece.
+
+  https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L57-L70
+
+  https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L72-L80
+
+  La fila de acciones son distintos botones, si haces click en interesa, el contador de personas interesadas se incrementa, si le das a compartir aparecerá un toast igual que el botón guardar. Se ven equilibradas en horizontal ya que uso un ChainStyle.spread
+
+  https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L85-L123
+
+- Pie interactivo
+  Un contador con un rememberSaveable para que al rotar no se reinicie el contador.
+
+  https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L34
+
+  Cuenta con un texto que define cuántas personas están interesadas que se irán incrementando conforme pulsen el botón de interesa. Junto al contador, hay un texto clickable que resta el contador si el usuario decide que no le interesa el evento.
+
+  https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L111-L126
+
+  IMAGEN DEL EJERCICIO
+
+Preview: 
+He definido varias preview que cuenta con cada una de las espeficiaciones: 
+
+Primer preview:
+
+https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/PreviewEj6.kt#L8-L23
+
+Segundo preview: 
+
+https://github.com/jesuscb123/PracticaEstados/blob/7d21a6223752baa3293512c6d873fe49b3646160/app/src/main/java/dam2/jetpack/practicaestados/PreviewEj6.kt#L25-L40
