@@ -80,4 +80,52 @@ https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f
 
 https://github.com/jesuscb123/PracticaEstados/blob/503ade479f1597fbd600e12541d1f43ed78bd49d/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio3.kt#L54-L59
 
+IMAGEN DEL EJERCICIO
+
+## Ejercicio4
+Crea una vista con dos botones: uno que sume y otro que reste un valor. El valor actual se muestra en el centro de la pantalla.
+
+Los botones y el contador están introducidos en un column para que se separen de manera vertical y se situen en el centro de la pantalla. A su vez, los botones están en un row para separarlos horizontalmente.
+https://github.com/jesuscb123/PracticaEstados/blob/d9a9342ec56642c486037c4c2eeddd920a182d02/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio4.kt#L23-L47
+
+Para este ejercicio he creado un contador con rememberSaveable para que al rotar no se reinicie el contador. 
+
+https://github.com/jesuscb123/PracticaEstados/blob/d9a9342ec56642c486037c4c2eeddd920a182d02/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio4.kt#L26
+
+El botón de sumar irá aumentando el número del contador con cada click:
+
+https://github.com/jesuscb123/PracticaEstados/blob/d9a9342ec56642c486037c4c2eeddd920a182d02/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio4.kt#L35-L37
+
+El botón de restar disminuye el número del contador con cada click, pero cuándo el contador llega a 0, el botón deja de funcionar.
+
+https://github.com/jesuscb123/PracticaEstados/blob/d9a9342ec56642c486037c4c2eeddd920a182d02/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio4.kt#L39-L43
+
+IMAGEN DEL EJERCICIO
+
+## Ejercicio5
+Crea una pantalla con un texto y un botón que permita mostrar u ocultar ese texto. El botón debe cambiar su etiqueta según el estado actual (“Mostrar texto” /  “Ocultar texto”).
+
+https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio5.kt#L17-L37
+
+Para hacer que el texto desaparezca cuándo se pulse un botón, creamos una variable booleana para que actúe de interruptor.
+
+https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio5.kt#L19
+
+Mediante una condición, el texto aparecerá si el interruptor es true y desaparecerá si es falso.
+
+https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio5.kt#L22-L26
+
+Al pulsar el botón, hará que sea true o false dependiendo del estado actual del interruptor.
+
+https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio5.kt#L28-L33
+
+IMAGEN DEL EJERCICIO
+
+## Ejercicio extra
+Una startup cultural te pide el prototipo de una tarjeta de evento para su app. La  tarjeta debe adaptarse a textos de longitud variable, distintas anchuras de pantalla y permitir interacción sin recargar toda la app. No se entrega código de ejemplo; tú decides cómo implementarlo con Jetpack Compose. 
+
+Primero voy a mostrar todo el código de este ejercicio y luego desglosaremos cada apartado.
+
+https://github.com/jesuscb123/PracticaEstados/blob/a209b1089de03b2d954b24c76437a16477985abe/app/src/main/java/dam2/jetpack/practicaestados/Ejercicio6.kt#L1-L121
+
 
