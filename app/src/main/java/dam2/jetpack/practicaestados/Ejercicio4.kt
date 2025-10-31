@@ -37,12 +37,10 @@ fun SumaResta(){
             }) { Text("+1")}
 
             Button(onClick = {
-                if (contador == 0){
-                    contador = 0
-                }else{
-                    contador--
-                }
-            }){Text("-1")}
+                contador --
+            },
+                enabled = contador > 0
+            ){Text("-1")}
         }
     }
 
