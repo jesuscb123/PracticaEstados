@@ -66,17 +66,7 @@ fun App(){
     Scaffold(Modifier.fillMaxSize(),
         topBar = {
             TopAppBar(title = {
-                when(titulo){
-                    Pantallas.Ejercicio6.rutaComposable -> {
-                        Column(Modifier.fillMaxWidth().background(Color.Gray)){
-                            Text("Tarjeta evento")
-                            Text("Bienvenido")
-                        }
-                    }
-                    else -> {
-                        if (titulo != null) Text("$titulo")
-                    }
-                }
+                if (titulo != null) Text("$titulo")
             })
         },
         bottomBar = {
@@ -115,11 +105,15 @@ fun App(){
             composable (Pantallas.Ejercicio3.rutaComposable) {CuadradoColor()}
             composable (Pantallas.Ejercicio4.rutaComposable) {SumaResta()}
             composable (Pantallas.Ejercicio5.rutaComposable) { Invisibilidad() }
-            composable (Pantallas.Ejercicio6.rutaComposable) {ContenidoTarjeta("Ven al Tech & Fun Fest 2025!" +
+            composable (Pantallas.Ejercicio6.rutaComposable) {ContenidoTarjeta("Noche de gamer Halloween", "¡Invita a tus amigos!", "Ven al Tech & Fun Fest 2025!" +
                     "Un evento donde la tecnología, la música y la creatividad se unen en un mismo lugar.\n" +
                     "Disfruta de charlas inspiradoras, talleres interactivos y zona gamer.\n" +
                     "Conoce a creadores, programadores y artistas innovadores.\n" +
-                    "¡No te lo pierdas, vive la experiencia que marcará el año!")}
+                    "¡No te lo pierdas, vive la experiencia que marcará el año!", """
+                        Tech & Beat Fest 2025 reúne en Cádiz la tecnología, la música y la creatividad. Vive talleres, 
+                        charlas, conciertos y experiencias interactivas únicas. 
+                        Conoce a innovadores, programadores y artistas que están creando el futuro digital.
+                    """.trimIndent())}
         }
 
 

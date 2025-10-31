@@ -15,6 +15,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.material3.Button
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -24,110 +29,63 @@ import androidx.constraintlayout.compose.ConstraintLayout
 @Preview
 @Composable
 fun Barra(){
+    var tipoBarra: ChainStyle by remember { mutableStateOf(ChainStyle.Spread) }
+    var texto by rememberSaveable { mutableStateOf("Spread") }
     Column(Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center){
-
-       Text("Barra Spread")
+        Text(texto)
         Spacer(Modifier.padding(4.dp))
-       BarraSpread()
+        DiferentesBarras(tipoBarra)
+        Spacer(Modifier.padding(4.dp ))
 
-        Spacer(Modifier.padding(5.dp))
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center){
+            Button(onClick = {
+                tipoBarra = ChainStyle.Spread
+                texto = "Spread"
 
-        Text("Barra SpreadInside")
-        Spacer(Modifier.padding(4.dp))
-        BarraSpreadInside()
+            }) { Text("Spread")}
 
-        Spacer(Modifier.padding(5.dp))
+            Button(onClick = {
+                tipoBarra = ChainStyle.SpreadInside
+                texto = "SpreadInside"
+            }) { Text("SpreadInside")}
 
-        Text("Barra Packed")
-        Spacer(Modifier.padding(4.dp))
-        BarraPacked()
+            Button(onClick = {
+                tipoBarra = ChainStyle.Packed
+                texto = "Packed"
+            }) { Text("Packed")}
 
+
+        }
     }
 
 }
 
 @Composable
-fun BarraSpread(){
+fun DiferentesBarras(tipoChain: ChainStyle){
     val ctx = LocalContext.current
 
      ConstraintLayout(
          modifier= Modifier.fillMaxWidth().padding(16.dp)
      ){
-         val (boton1, boton2, boton3) = createRefs()
+         val (explorar, favoritos, perfil) = createRefs()
 
-         Button(onClick = {
-             Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-         },
-             modifier = Modifier.constrainAs(boton1){}) { Text("Explorar") }
+         Text("Explorar", Modifier.constrainAs(explorar){
+             top.linkTo(parent.top)
+             start.linkTo(parent.start)
+         })
 
-         Button(onClick = {
-             Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-         },
-             modifier = Modifier.constrainAs(boton2){}) { Text("Favoritos") }
+         Text("Favoritos", Modifier.constrainAs(favoritos){
+             top.linkTo(parent.top)
+         })
 
-         Button(onClick = {
-             Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-         },
-             modifier = Modifier.constrainAs(boton3){}) { Text("Perfil") }
+         Text("Perfil", Modifier.constrainAs(perfil){
+             top.linkTo(parent.top)
+             end.linkTo(parent.end)
+         })
 
-         createHorizontalChain(boton1,boton2,boton3, chainStyle = ChainStyle.Spread)
+         createHorizontalChain(explorar,favoritos,perfil, chainStyle = tipoChain)
      }
 }
 
-@Composable
-fun BarraSpreadInside(){
-    val ctx = LocalContext.current
-
-    ConstraintLayout(
-        modifier= Modifier.fillMaxWidth().padding(16.dp)
-    ){
-        val (boton1, boton2, boton3) = createRefs()
-
-        Button(onClick = {
-            Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-        },
-            modifier = Modifier.constrainAs(boton1){}) { Text("Explorar") }
-
-        Button(onClick = {
-            Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-        },
-            modifier = Modifier.constrainAs(boton2){}) { Text("Favoritos") }
-
-        Button(onClick = {
-            Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-        },
-            modifier = Modifier.constrainAs(boton3){}) { Text("Perfil") }
-
-        createHorizontalChain(boton1,boton2,boton3, chainStyle = ChainStyle.SpreadInside)
-    }
-}
-
-@Composable
-fun BarraPacked(){
-    val ctx = LocalContext.current
-
-    ConstraintLayout(
-        modifier= Modifier.fillMaxWidth().padding(16.dp)
-    ){
-        val (boton1, boton2, boton3) = createRefs()
-
-        Button(onClick = {
-            Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-        },
-            modifier = Modifier.constrainAs(boton1){}) { Text("Explorar") }
-
-        Button(onClick = {
-            Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-        },
-            modifier = Modifier.constrainAs(boton2){}) { Text("Favoritos") }
-
-        Button(onClick = {
-            Toast.makeText(ctx, "Explorar", Toast.LENGTH_SHORT).show()
-        },
-            modifier = Modifier.constrainAs(boton3){}) { Text("Perfil") }
-
-        createHorizontalChain(boton1,boton2,boton3, chainStyle = ChainStyle.Packed)
-    }
-}
